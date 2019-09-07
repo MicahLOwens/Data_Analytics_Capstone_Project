@@ -35,25 +35,38 @@ The Capstone question was answered with mixed success. What the visualizations u
 ## Discussion
 ### Limitations & Issues in Project
 **Limited Metrics Within Data:** Within the Google My Business data, conclusions were only able to be drawn and connected within the conversion and organic search data available within that source. The significant amount of data cleaning & combining needed to produce workable data meant there wasn’t enough time during the project to combine the data with other valuable data sources
+
 **Some Unclear Visualizations:** While great effort was put into creating a fluid, responsive, easy-to-use, and interactive dashboard, many improvements could be made in creating clearer visualizations. In particular, the dashboard visualization that shows the relationship between location ratings and organic conversions. More time and attention could be paid to fleshing out this visualization in a way that shows the answer to the Capstone Question clearly to someone without technical knowledge.
+
 **Tableau Formatting Limitations:** There were several limitations with formatting & styling the dashboard that made it difficult to create seamless experience for the user. For example, while it was possible to add a custom branded color palette with XML, it was impossible to use client-branded custom typefaces (as these fonts didn’t translate to the web version of the dashboard). There were also performance and latency issues with map navigation and mobile optimization. Formatting and adding headers to tables inserted in dashboards revealed several hard road-blocks. Finally, because there were so many visual flourishes, custom headers, and floating objects, it proved difficult-to-impossible to make the dashboard size automatically (As too many elements got pushed around at different window sizes), hurting usability on mobile devices or narrow windows.
+
 **Limited Historical Data:** While the amount of data retrieved for the project (about 14 months) worked well for creating visualizations and doing historical analysis, it wasn’t a large enough sample to effectively consider seasonality on a larger scale. Adding 2-3 years of historical data would greatly improve the dashboard’s forecasting accuracy.
+
 **SQL Use for Capstone:** Due to time constraints, there was limited SQL use for processing data in the final capstone analysis (though data was fully loaded into the SQL database & some queries were made).
 
 ### Opportunities for Future Research
 **Linking Additional Data Sources:** Though many exports were combined to achieve an acceptable sample of historical data, these were largely from the same same of Google My Business Insights data. However, the inclusion of location data in this source will allow it to be easily linked to more location-based data sources to provide more meaningful correlations. For example, demographic data (age, income, nationality, etc) would be very useful to evaluate external indicators of a home healthcare location’s success in organic search.
+
 **Improved Visualizations:** Admittedly, the project focused more around solving a real-world problem (the inability to do historical analysis in one easy-to-use place for many GMB locations), the dashboard and visualizations only focused secondarily on answer the capstone question. More time and effort could be put into simplifying and adding additional visualizations to more clearly answer the proposed question.
+
 **Improve Data Reliability:** The current sample provided excellent data, but research didn’t include an evaluation of data or sample reliability, so it was not possible to reference the Cronbach’s Alpha, P-value, or other metrics to indicate whether the sample was representative of a larger population and whether the results showed an objective correlation between measured data points.
 
 ## Skills Used In Capstone Project
 ### Tableau
 **Calculated Fields:** Many instances of using calculated fields for new metrics & parameter integrations (See Appendices 3-A through 3-C)
+
 **Parameters:** Use of parameters for chart control, custom search, custom styling, map control, and more features. See Appendix 3-A for example of calculated field to search via location name, family, city, or state to be controlled via custom parameter.
+
 **Visualizations & Dashboards:** Many visualizations were created and refined to form the final dashboard. Calculated fields & parameters were used to control metrics used in visualizations for more intuitive use of the dashboard for non-technical users.
+
 **Groups & Sets:** Groups & sets were used in tandem with calculated fields & custom filters to classify the locations into families[^2]
+
 **Maps:** The map component (including nicely formatted & dynamic tooltips) was the starting place for my Capstone dashboard. The map implemented is dynamic and will react to any interaction in the dashboard automatically. Focus was put on keeping it easy-to-read (not too many metrics + an accessible legend) but full-featured.
+
 **Forecasting:** Forecasting was thoroughly implemented in the project & dashboard. Instead of creating various forecasts for different metrics, I created a calculated field & parameter to dynamically switch one forecast to measure different key metrics based on user selection.
+
 **Formatting & Design:** There was significant effort put into the aesthetic of the dashboard (including editing in a custom color palette via XML) via imagery, color use, graphics, typography, and other visual flourishes. However, the UI of the dashboard is ultimately secondary to the User Experience. Having a good UX was the primary focus of the dashboard, so great effort was put into having each element of it tied to the reaction of the user, so simple things like clicking the name of a location, inputting a search, or interacting with the map will change every single visualization in the dashboard. The dashboard will also use dynamic text displays to show the user what is being measured and what scope they are in, so no one is lost or confused by accidentally clicking into a location or selecting a metric.
+
 **JOINS & Other:** Tableau’s built in JOIN functionality & ability to intelligently split columns and assign data types were both used extensively to transform the data into usable metrics & create columns of usable location data for the map view.
 
 ### SQL
