@@ -91,12 +91,10 @@ _Note that API calls have had some information (such as URL targets & API keys) 
 ### API Call Examples
 **(2-A) GET Request for Google Pagespeed**
 ```https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://lhcgroup.com/locations/christus-homecare-of-tyler/&strategy=mobile&responseCode=integer&ruleGroups.(AIzaSyAPC0wrtVAzsAT9p9f5y_jshMExyLmwfZs).score=integer&key=[API-KEY-HERE]
-
 ```
 
 **(2-B) GET Request Sample for Google My Business Data**
 ```https://mybusiness.googleapis.com/$discovery/rest?version=v4
-
 ```
 
 **(2-C) GET Request for SEMRush Site Auditing**
@@ -123,9 +121,8 @@ WHEN "Total Searches" then [Total searches]
 END
 ```
 
-\*\*(3-C) Example of Formula to Combine Data Sources into Custom Metrics
-```
-(([Search views]/100)+([Total searches]/100)+([Discovery searches]/100)/3)
+**(3-C) Example of Formula to Combine Data Sources into Custom Metrics**
+```(([Search views]/100)+([Total searches]/100)+([Discovery searches]/100)/3)
 ```
 
 **(3-D) Custom XML File for Adding Client-Branded Color Palette to Tableau**
