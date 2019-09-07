@@ -83,28 +83,32 @@ _Note that API calls have had some information (such as URL targets & API keys) 
 
 ### Terminal Commands
 **(1-A) Combining CSV Data:**
-```	cd /Desktop/GMB_Captsone_Project
+```
+cd /Desktop/GMB_Captsone_Project
 
-	cat “GMB insights-2018-05.csv” “GMB insights-2018-06.csv” “GMB insights-2018-07.csv” "GMB insights-2018-08.csv" "GMB insights-2018-09.csv" "GMB insights-2018-10.csv" "GMB insights-2018-11.csv" "GMB insights-2018-12.csv" "GMB insights-2019-01.csv" "GMB insights-2019-02.csv" "GMB insights-2019-03.csv" "GMB insights-2019-04.csv" "GMB insights-2019-05.csv" > GMB_Insights_1_Year.csv
+cat “GMB insights-2018-05.csv” “GMB insights-2018-06.csv” “GMB insights-2018-07.csv” "GMB insights-2018-08.csv" "GMB insights-2018-09.csv" "GMB insights-2018-10.csv" "GMB insights-2018-11.csv" "GMB insights-2018-12.csv" "GMB insights-2019-01.csv" "GMB insights-2019-02.csv" "GMB insights-2019-03.csv" "GMB insights-2019-04.csv" "GMB insights-2019-05.csv" > GMB_Insights_1_Year.csv
 ```
 
 ### API Call Examples
 **(2-A) GET Request for Google Pagespeed**
-```https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://lhcgroup.com/locations/christus-homecare-of-tyler/&strategy=mobile&responseCode=integer&ruleGroups.(AIzaSyAPC0wrtVAzsAT9p9f5y_jshMExyLmwfZs).score=integer&key=[API-KEY-HERE]
+```
+https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://lhcgroup.com/locations/christus-homecare-of-tyler/&strategy=mobile&responseCode=integer&ruleGroups.(AIzaSyAPC0wrtVAzsAT9p9f5y_jshMExyLmwfZs).score=integer&key=[API-KEY-HERE]
 ```
 
 **(2-B) GET Request Sample for Google My Business Data**
-```https://mybusiness.googleapis.com/$discovery/rest?version=v4
+```
+https://mybusiness.googleapis.com/$discovery/rest?version=v4
 ```
 
 **(2-C) GET Request for SEMRush Site Auditing**
-```https://api.semrush.com/?type=domain\_organic&key=[APIKEYHERE]&display\_limit=100&export\_columns=Ph,Po,Nq,Tg,Co,Ur&domain=&display\_sort=nq\_desc&database=us
-
+```
+https://api.semrush.com/?type=domain\_organic&key=[APIKEYHERE]&display\_limit=100&export\_columns=Ph,Po,Nq,Tg,Co,Ur&domain=&display\_sort=nq\_desc&database=us
 ```
 
 ### Tableau Formulas
 **(3-A) Location Search Filter Controlled by Custom Parameter**
-```CONTAINS(([State]),[Search Box])
+```
+CONTAINS(([State]),[Search Box])
 OR
 CONTAINS(([City]),[Search Box])
 OR
@@ -114,7 +118,8 @@ CONTAINS(([Families]),[Search Box])
 ```
 
 **(3-B) View Filter to Switch Table Data Based on Parameter Control**
-```CASE [Parameters].[Filter On]
+```
+CASE [Parameters].[Filter On]
 WHEN "Conversion Rate" THEN [Conversion Rate]
 WHEN "Total Actions" THEN [Total actions]
 WHEN "Total Searches" then [Total searches]
@@ -122,7 +127,8 @@ END
 ```
 
 **(3-C) Example of Formula to Combine Data Sources into Custom Metrics**
-```(([Search views]/100)+([Total searches]/100)+([Discovery searches]/100)/3)
+```
+(([Search views]/100)+([Total searches]/100)+([Discovery searches]/100)/3)
 ```
 
 **(3-D) Custom XML File for Adding Client-Branded Color Palette to Tableau**
